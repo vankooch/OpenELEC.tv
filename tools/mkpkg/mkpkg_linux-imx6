@@ -48,7 +48,7 @@ echo "packing sources..."
 echo "remove temporary sourcedir..."
   rm -rf $PKG_NAME-$PKG_VERSION
   
- echo "copying tar balls to sources..."
+echo "copying tar balls to sources..."
    if [ ! -d ../../sources/ ]; then
       mkdir ../../sources/
    fi
@@ -56,7 +56,7 @@ echo "remove temporary sourcedir..."
       mkdir ../../sources/$PKG_NAME/
    fi
    mv $PKG_NAME-$PKG_VERSION.tar.xz ../../sources/$PKG_NAME/
- echo "generate md5 and url files..."
+echo "generate md5 and url files..."
    cd ../..
    md5sum sources/$PKG_NAME/$PKG_NAME-$PKG_VERSION.tar.xz > sources/$PKG_NAME/$PKG_NAME-$PKG_VERSION.tar.xz.md5
    echo " http://sources.openelec.tv/devel/$PKG_NAME-$PKG_VERSION.tar.xz" > sources/$PKG_NAME/$PKG_NAME-$PKG_VERSION.tar.xz.url
